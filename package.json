@@ -1,0 +1,30 @@
+{
+  "name": "web-lsp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "bootstrap": "^5.3.8",
+    "chart.js": "^4.5.1",
+    "firebase": "^12.8.0",
+    "jsonwebtoken": "^9.0.3",
+    "mssql": "^12.2.0",
+    "next": "14.2.5",
+    "react": "18.2.0",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "18.2.0",
+    "react-select": "^5.10.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.35",
+    "sonarqube-scanner": "^4.3.6"
+  }
+}

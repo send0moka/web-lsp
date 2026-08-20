@@ -1,0 +1,379 @@
+/* Main Container */
+.container_inner {
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 0.6rem 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 18px;
+  background-color: var(--background);
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-hover);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Content Section */
+.contentSection {
+  padding: 1rem 0 2.5rem 0;
+  background-color: #ffffff;
+  max-width: 100%;
+}
+
+.contentSection p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+/* Summary Card */
+.summaryCard {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.summaryCard h3 {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.summaryCard p {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 0;
+}
+
+/* Chart Cards */
+.chartCard {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.chartCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  text-align: center;
+}
+
+.chartCard canvas {
+  max-height: 500px;
+  width: 100% !important;
+}
+
+/* Filter Container */
+.filterContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filterContainer label {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.yearSelect {
+  width: 180px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.yearSelect:hover {
+  border-color: #3b82f6;
+}
+
+.yearSelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Loading Message */
+.loadingMessage {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+/* Report Container */
+.reportContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Pie Charts Container */
+.pieChartsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pieChartCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.3s ease;
+}
+
+.pieChartCard:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pieChartCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  text-align: center;
+}
+
+.pieChartWrapper {
+  margin-bottom: 1.5rem;
+}
+
+/* Pie Chart Summary */
+.pieChartSummary {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.summaryItem strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Badge colors for Event pie chart */
+.badgeActual {
+  width: 16px;
+  height: 16px;
+  background-color: #3b82f6;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.badgePlan {
+  width: 16px;
+  height: 16px;
+  background-color: #f59e0b;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Badge colors for Participant pie chart */
+.badgeActualParticipant {
+  width: 16px;
+  height: 16px;
+  background-color: #10b981;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.badgePlanParticipant {
+  width: 16px;
+  height: 16px;
+  background-color: #8b5cf6;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.badgeDifference {
+  width: 16px;
+  height: 16px;
+  background-color: #6b7280;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container_inner {
+    padding: 0 1.5rem;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .summaryCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container_inner {
+    padding: 0 1rem;
+  }
+  
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .pieChartsContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .filterContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .yearSelect {
+    width: 100%;
+  }
+  
+  .summaryCard {
+    width: 100%;
+  }
+  
+  .summaryCard p {
+    font-size: 24px;
+  }
+  
+  .chartCard h3,
+  .pieChartCard h3 {
+    font-size: 1.1rem;
+  }
+  
+  .pieChartSummary {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.25rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 0.9rem;
+  }
+  
+  .breadcrumb {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .chartCard {
+    padding: 15px;
+  }
+  
+  .pieChartCard {
+    padding: 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .breadcrumb,
+  .hero,
+  .filterContainer {
+    display: none;
+  }
+  
+  .chartCard,
+  .pieChartCard {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .reportContainer {
+    gap: 1rem;
+  }
+}

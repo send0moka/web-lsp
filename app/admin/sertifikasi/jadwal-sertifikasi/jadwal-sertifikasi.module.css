@@ -1,0 +1,556 @@
+/* Main Container */
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 80px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--background);
+}
+
+.container_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  position: fixed;
+  top: 80px;          /* tinggi navbar */
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  padding: 0.6rem 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 18px;
+
+  background-color: var(--background);
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-hover);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.tabContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0 5px 0;
+}
+
+.tabItem {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #f1f1f1;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.tabItem:hover {
+  background: #e2e2e2;
+}
+
+.activeTab {
+  background: #dc2626;
+  color: white;
+}
+
+/* Buttons */
+.btnPrimary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnPrimary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnSecondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+
+/* Content Section */
+.contentSection {
+  padding: 1rem 0 2.5rem 0;
+  background-color: #ffffff;
+  max-width: 100%;
+}
+
+/* Form Styles */
+.registrationForm {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* FIELDSET STYLES - untuk menggantikan role="group" */
+.formFieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  min-inline-size: auto;
+}
+
+.formFieldset legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+  padding: 0;
+  width: 100%;
+  float: left;
+}
+
+/* Clearfix untuk legend */
+.formFieldset legend + * {
+  clear: left;
+}
+
+/* HILANGKAN BORDER FIELDSET */
+.formGroup {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  min-inline-size: auto;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+/* FORM INPUT - STANDARDIZED HEIGHT */
+.formInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  background-color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  height: 46px; /* Fixed height: 0.75rem*2 = 24px + border 2px + content 20px = 46px */
+  line-height: 1.2;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.formInput::placeholder {
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
+/* Select styling */
+.formInput[type="select"],
+select.formInput {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.2em 1.2em;
+  padding-right: 2.5rem;
+  color: var(--text-primary);
+}
+
+/* REACT SELECT - MATCHING HEIGHT WITH FORM INPUT */
+.react-select__control {
+  width: 100%;
+  min-height: 46px !important;
+  height: 46px !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 1rem !important;
+  font-size: 1rem;
+  font-family: inherit;
+  box-shadow: none !important;
+  background-color: white !important;
+  cursor: pointer !important;
+}
+
+.react-select__control:hover {
+  border-color: var(--border-color) !important;
+}
+
+.react-select__control--is-focused {
+  border-color: var(--primary-color) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+.react-select__value-container {
+  height: 44px !important;
+  padding: 0 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.react-select__input-container {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.react-select__input {
+  height: 44px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.react-select__placeholder {
+  color: var(--text-secondary) !important;
+  margin: 0 !important;
+  line-height: 44px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: calc(100% - 8px) !important;
+}
+
+.react-select__single-value {
+  line-height: 44px !important;
+  margin: 0 !important;
+  color: var(--text-primary) !important;
+}
+
+.react-select__indicators {
+  height: 44px !important;
+}
+
+.react-select__indicator {
+  padding: 0 8px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.react-select__indicator-separator {
+  display: none !important;
+}
+
+.react-select__menu {
+  z-index: 9999 !important;
+  margin-top: 4px !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+}
+
+.react-select__option {
+  padding: 0.75rem 1rem !important;
+  cursor: pointer !important;
+}
+
+.react-select__option--is-focused {
+  background-color: rgba(220, 38, 38, 0.1) !important;
+}
+
+.react-select__option--is-selected {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+/* Button Group */
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+/* Clear Button */
+.clearButton {
+  flex: 1;
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  height: 52px; /* Slightly taller for buttons */
+}
+
+.clearButton:hover {
+  background-color: #4b5563;
+  transform: translateY(-2px);
+}
+
+.clearButton:active {
+  transform: translateY(0);
+}
+
+/* Submit Button */
+.submitButton {
+  flex: 1;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  height: 52px; /* Slightly taller for buttons */
+}
+
+.submitButton:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+/* Success Message */
+.successMessage {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--success-color);
+  font-weight: 500;
+  text-align: center;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Error Text */
+.errorText {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navLinks {
+    gap: 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .registrationForm {
+    padding: 1.5rem;
+  }
+
+  .formLabel, 
+  .formFieldset legend {
+    font-size: 0.95rem;
+  }
+
+  .formInput {
+    font-size: 16px; /* Prevent zoom on iOS */
+    height: 46px;
+  }
+
+  /* React Select mobile adjustments */
+  .react-select__control {
+    min-height: 46px !important;
+    height: 46px !important;
+  }
+
+  .react-select__value-container {
+    height: 44px !important;
+  }
+
+  .react-select__input-container {
+    height: 44px !important;
+  }
+
+  .react-select__placeholder {
+    line-height: 44px !important;
+  }
+
+  .react-select__single-value {
+    line-height: 44px !important;
+  }
+
+  .react-select__indicators {
+    height: 44px !important;
+  }
+
+  .react-select__indicator {
+    height: 44px !important;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .clearButton,
+  .submitButton {
+    width: 100%;
+    height: 52px;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+
+  .container_inner {
+    padding: 0 1rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: #1f2937;
+  }
+
+  .contentSection {
+    background-color: #111827;
+  }
+
+  .registrationForm {
+    background-color: #374151;
+  }
+
+  .formInput {
+    background-color: #1f2937;
+    color: var(--text-primary);
+    border-color: #4b5563;
+  }
+
+  .formInput:focus {
+    border-color: var(--primary-color);
+  }
+
+  /* React Select dark mode */
+  .react-select__control {
+    background-color: #1f2937 !important;
+    border-color: #4b5563 !important;
+  }
+
+  .react-select__single-value {
+    color: #f3f4f6 !important;
+  }
+
+  .react-select__placeholder {
+    color: #9ca3af !important;
+  }
+
+  .react-select__menu {
+    background-color: #1f2937 !important;
+  }
+
+  .react-select__option {
+    color: #f3f4f6 !important;
+  }
+
+  .react-select__option--is-focused {
+    background-color: #374151 !important;
+  }
+
+  .react-select__option--is-selected {
+    background-color: var(--primary-color) !important;
+  }
+
+  /* Fieldset dark mode */
+  .formFieldset legend {
+    color: #f3f4f6;
+  }
+}

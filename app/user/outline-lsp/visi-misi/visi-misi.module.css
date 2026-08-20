@@ -1,0 +1,284 @@
+/* Main Container */
+.container_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 0.6rem 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 18px;
+  background-color: var(--background);
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-hover);
+}
+
+/* Hero Section*/
+.hero {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+
+/* Content Section*/
+.contentSection {
+  padding: 2rem 0;
+  background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background */
+.contentSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: radial-gradient(circle at 0% 0%, rgba(220, 38, 38, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Section Title */
+.contentSection h2.sectionTitle {
+  text-align: left;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+/* garis aksen merah */
+.contentSection h2.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Paragraf Visi */
+.contentSection p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: hsl(215, 25%, 27%);
+  margin-bottom: 2rem;
+  max-width: 100%;
+  background: white;
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.1);
+  position: relative;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contentSection p:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 35px -12px rgba(220, 38, 38, 0.15);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+/* Quote mark pada paragraf Visi */
+.contentSection p::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 5rem;
+  color: rgba(220, 38, 38, 0.15);
+  font-family: serif;
+  line-height: 1;
+}
+
+/* Misi List  */
+.misiList {
+  margin-top: 0.5rem;
+  padding-left: 0;
+  max-width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.misiList li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #334155;
+  position: relative;
+  padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.misiList li:hover {
+  transform: translateX(8px);
+  border-color: #dc2626;
+  box-shadow: 0 8px 20px -8px rgba(220, 38, 38, 0.2);
+}
+
+.misiList li::before {
+  content: '✓';
+  position: absolute;
+  left: 1.25rem;
+  top: 1.2rem;
+  color: white;
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  width: 26px;
+  height: 26px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .contentSection {
+    background: linear-gradient(145deg, #0f172a 0%, #020617 100%);
+  }
+
+  .contentSection h2.sectionTitle {
+    color: #f1f5f9;
+  }
+
+  .contentSection p {
+    background: #1e293b;
+    color: #cbd5e1;
+    border-color: #334155;
+  }
+
+  .misiList li {
+    background: #1e293b;
+    color: #cbd5e1;
+    border-color: #334155;
+  }
+
+  .misiList li::before {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .contentSection h2.sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+
+  .contentSection p {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  .contentSection p::before {
+    font-size: 3rem;
+    top: -5px;
+    left: 12px;
+  }
+
+  .misiList li {
+    font-size: 0.95rem;
+    padding: 1rem 1rem 1rem 3rem;
+  }
+
+  .misiList li::before {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container_inner {
+    padding: 0 1.25rem;
+  }
+
+  .contentSection {
+    padding: 2.5rem 0;
+  }
+
+  .contentSection h2.sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .misiList li {
+    padding: 0.875rem 0.875rem 0.875rem 2.75rem;
+  }
+
+  .misiList li::before {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    top: 0.85rem;
+    left: 0.875rem;
+  }
+}

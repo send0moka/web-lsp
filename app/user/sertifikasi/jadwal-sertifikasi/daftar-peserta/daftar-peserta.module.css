@@ -1,0 +1,448 @@
+/* Main Container */
+.container_inner {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  position: fixed;
+  top: 80px;         
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  padding: 0.6rem 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 18px;
+
+  background-color: var(--background);
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-hover);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Content Section */
+.contentSection {
+  padding: 1rem 0 2.5rem 0;
+  background-color: #ffffff;
+  max-width: 100%;
+}
+
+/* Tab Container */
+.tabContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0 5px 0;
+}
+
+.tabItem {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #f1f1f1;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.tabItem:hover {
+  background: #e2e2e2;
+}
+
+.activeTab {
+  background: #dc2626;
+  color: white;
+}
+
+/* Table Styles */
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.table thead {
+  background-color: #dc2626;
+  color: white;
+}
+
+.table thead th {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 2px solid #dc2626;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #fef2f2;
+}
+
+.table tbody td {
+  padding: 0.875rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Kolom Nama dan Skema di kiri */
+.table tbody td:nth-child(2) {
+  text-align: left;
+  font-weight: 500;
+}
+
+.table tbody td:nth-child(7) {
+  text-align: left;
+}
+
+.skemaCell {
+  max-width: 250px;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: left;
+}
+
+.tanggalCell {
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+/* Loading & Error Messages */
+.loadingMessage,
+.emptyMessage,
+.errorMessage {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.errorMessage {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.emptyMessage {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+/* Search and Filter Controls */
+.controlsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.searchContainer {
+  order: 2;
+  flex: 1;
+  min-width: 250px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  color: #1f2937;
+  transition: border-color 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.rowsPerPageContainer {
+  order: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+}
+
+.rowsLabel {
+  font-size: 0.95rem;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.rowsSelect {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  color: #1f2937;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.rowsSelect:focus {
+  outline: none;
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Results Info */
+.resultsInfo {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  padding: 0.1rem 0;
+}
+
+/* Pagination */
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.paginationBtn {
+  padding: 0.75rem 1.5rem;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.paginationBtn:hover:not(:disabled) {
+  background-color: #dc2626;
+  color: white;
+  border-color: #dc2626;
+}
+
+.paginationBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 0.95rem;
+  color: #1f2937;
+  font-weight: 500;
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Detail Container */
+.detailContainer {
+  background-color: #ffffffe0;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .contentSection {
+    background-color: #111827;
+  }
+
+  .table {
+    background-color: #1f2937;
+  }
+
+  .table tbody td {
+    color: #d1d5db;
+  }
+
+  .table tbody tr:hover {
+    background-color: #374151;
+  }
+
+  .emptyMessage {
+    background-color: #1f2937;
+    color: #9ca3af;
+  }
+
+  .searchInput {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    border-color: #4b5563;
+  }
+
+  .searchInput:focus {
+    border-color: #dc2626;
+  }
+
+  .searchInput::placeholder {
+    color: #9ca3af;
+  }
+
+  .rowsSelect {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    border-color: #4b5563;
+  }
+
+  .paginationBtn {
+    background-color: #1f2937;
+    border-color: #4b5563;
+    color: #f3f4f6;
+  }
+
+  .paginationBtn:hover:not(:disabled) {
+    background-color: #dc2626;
+    border-color: #dc2626;
+  }
+
+  .resultsInfo {
+    color: #9ca3af;
+  }
+
+  .pageInfo {
+    color: #f3f4f6;
+  }
+
+  .detailContainer {
+    background-color: #1f2937e0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+    padding: 0.6rem 1rem;
+  }
+
+  .container_inner {
+    padding: 0 1rem;
+  }
+
+  .detailContainer {
+    padding: 1rem;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .controlsContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchContainer {
+    min-width: 100%;
+    order: 1;
+  }
+
+  .rowsPerPageContainer {
+    order: 2;
+    justify-content: flex-end;
+  }
+
+  .paginationContainer {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .pageInfo {
+    min-width: 100%;
+    order: -1;
+    margin-bottom: 0.5rem;
+  }
+
+  .tabItem {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .tanggalCell {
+    white-space: normal;
+    min-width: 120px;
+  }
+
+  .skemaCell {
+    min-width: 180px;
+  }
+}

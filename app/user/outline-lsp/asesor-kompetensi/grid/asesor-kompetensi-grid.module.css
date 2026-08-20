@@ -1,0 +1,485 @@
+/* Main Container */
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 80px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--background);
+}
+
+.container_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  position: fixed;
+  top: 80px;          
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  padding: 0.6rem 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 18px;
+
+  background-color: var(--background);
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-hover);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.tabContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.tabItem {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #f1f1f1;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.tabItem:hover {
+  background: #e2e2e2;
+}
+
+.activeTab {
+  background: #dc2626;
+  color: white;
+}
+
+/* Buttons */
+.btnPrimary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnPrimary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnSecondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Outline Section */
+.outlineSection {
+  padding: 2rem 2rem;
+  background-color: #f9fafb;
+}
+
+.outlineGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.outlineCard {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;   
+}
+
+.outlineCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Assessors in Card */
+.assessorsInCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  padding-top: 1rem;
+  justify-items: center;
+}
+
+.assessorsInCard:has(.assessorItem:only-child) {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: auto;
+}
+
+.assessorItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.assessorPhoto {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;   /* supaya muka kelihatan */
+  border: 3px solid #dc2626;  /* merah */
+  background-color: #f3f4f6;
+}
+
+.assessorPhoto:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.assessorName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  text-align: center;
+}
+
+.emptyAssessor {
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  text-align: center;
+
+  /* Tinggi sama semua */
+  min-height: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Garis merah bawah */
+  padding-bottom: 0.6rem;
+  border-bottom: 3px solid #dc2626;
+  width: 100%;
+}
+
+/* Scheme Link */
+.asesorLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.asesorLink:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Loading & Error Messages */
+.loadingMessage,
+.emptyMessage,
+.errorMessage {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.errorMessage {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Detail Container */
+.detailContainer {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detailValue {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+/* Units Section */
+.unitsSection {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.unitsSection .sectionTitle {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.emptyUnitsMessage {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .contentSection {
+    background-color: #111827;
+  }
+
+  .contentSection p {
+    color: #d1d5db;
+  }
+
+  .table {
+    background-color: #1f2937;
+  }
+
+  .table tbody td {
+    color: #d1d5db;
+  }
+
+  .table tbody tr:hover {
+    background-color: #374151;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navLinks {
+    gap: 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .controlsContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchContainer {
+    min-width: 100%;
+  }
+
+  .rowsPerPageContainer {
+    justify-content: space-between;
+  }
+
+  .paginationContainer {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .pageInfo {
+    min-width: 100%;
+    order: -1;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .contentSection {
+    background-color: #111827;
+  }
+
+  .schemeSection {
+    background-color: #1f2937;
+  }
+
+  .assessorCard {
+    background-color: #374151;
+  }
+
+  .assessorName {
+    color: #f3f4f6;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navLinks {
+    gap: 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+.schemeHeader {
+  width: 100%;
+  min-height: 70px;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.schemeName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #dc2626;
+  width: 100%;
+}
+
+  .assessorGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .assessorCard {
+    padding: 1rem 0.75rem;
+  }
+
+  .photoWrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: #1f2937;
+  }
+}

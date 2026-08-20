@@ -1,0 +1,13 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red circle background -->
+  <circle cx="30" cy="50" r="28" fill="#dc2626"/>
+  
+  <!-- LSP text in white -->
+  <text x="30" y="58" font-size="16" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">LSP</text>
+  
+  <!-- Denso text -->
+  <text x="90" y="55" font-size="18" font-weight="bold" fill="#dc2626" font-family="Arial">DENSO</text>
+  
+  <!-- Indonesia text -->
+  <text x="90" y="72" font-size="12" fill="#6b7280" font-family="Arial">Indonesia</text>
+</svg>

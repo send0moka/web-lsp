@@ -1,0 +1,6 @@
+projectKey=Website-Sertifikasi
+serverUrl=http://localhost:9000
+serverVersion=26.5.0.122743
+dashboardUrl=http://localhost:9000/dashboard?id=Website-Sertifikasi
+ceTaskId=5c42ed95-870c-47b3-b798-ac8d4fdae615
+ceTaskUrl=http://localhost:9000/api/ce/task?id=5c42ed95-870c-47b3-b798-ac8d4fdae615
